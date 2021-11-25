@@ -1,0 +1,19 @@
+unit clsStudent;
+
+interface
+
+type TStudent = class(TObject)
+
+  private
+    name: string;
+    age: real;
+    am: string;
+
+  public
+
+
+end;
+
+implementation
+
+end.

@@ -1,0 +1,61 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Grids, clsStudent, Generics.Collections;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit2: TEdit;
+    ListBox1: TListBox;
+    Button2: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  studList: TList<TStudent>;
+  st: TStudent;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+
+var
+  //stu: TStudent;
+  name,am: string;
+begin
+
+  name := Edit1.Text;
+  am := Edit2.Text;
+
+  st.Create(name,am);
+  //studList.Add(st);
+
+end;
+
+
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  ListBox1.Items.Add(st.GetName);
+end;
+
+end.
